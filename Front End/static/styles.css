@@ -1,0 +1,112 @@
+#box {
+  width: 200px;
+  height: 60px;
+  padding-top: 14px;
+  font-size: 19px;
+  color: #ffffff;
+  vertical-align: middle;
+  line-height: 8px;
+  text-align: center;
+  vertical-align: middle;}
+
+#sbox {
+  width: 80px;
+  height: 80px;
+  padding: 1px;
+  font-size: 19px;
+  color: #ffffff;
+  vertical-align: middle;
+  line-height: 24px;
+  text-align: center;
+  vertical-align: middle;}
+
+
+#lbox {
+  width: 240px;
+  height: 60px;
+  padding-top: 14px;
+  font-size: 19px;
+  color: #ffffff;
+  vertical-align: middle;
+  line-height: 24px;
+  text-align: center;
+  vertical-align: middle;}
+
+.year {
+  position: relative;
+  left: 695px;
+  bottom: 655px;}
+
+.cond {
+  position: relative;
+  left: 1200px;
+  bottom: 708px;}
+
+.bed {
+  position: relative;
+  left: 430px;
+  bottom: 675px;}
+
+.f2 {
+  position: relative;
+  left: 675px;
+  bottom: 735px;}
+
+.fbath {
+  position: relative;
+  left: 950px;
+  bottom: 795px;}
+
+.car {
+  position: relative;
+  left: 1396px;
+  bottom: 768px;}
+
+.f1 {
+  position: relative;
+  left: 436px;
+  bottom: 700px;}
+
+.hbath {
+  position: relative;
+  left: 850px;
+<<<<<<< HEAD
+  bottom: 870px;}  
+  
+.garea {
+  position: relative;
+  left: 900px;
+  bottom: 900px;} 
+}
+=======
+  bottom: 760px;}
+
+.ktch {
+  position: relative;
+  left: 975px;
+  bottom: 840px;}
+
+.lot {
+  position: relative;
+  left: 675px;
+  bottom: 665px;}
+
+>>>>>>> 164375564b28542971005d0ebeae0c5b22094d99
+.main-svg {
+    background-color: transparent !important;
+}  
+
+.shadow
+{
+    color: white;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    8px 8px 0 #000;  
+}
+
+.submit {
+  position: relative;
+  left: 1396px;
+  bottom: 750px;}  
