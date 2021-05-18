@@ -5,20 +5,23 @@ import numpy as np
 import pickle
 import pandas as pd
 
-# Load pipeline
-# pipeline = load_p(open("../housing.pkl"))
-
 # Create an instance of Flask
 app = Flask(__name__)
 model = None
+house_cost = None
+cost_data = None
 
 @app.route("/", methods=["GET", "POST"])
 def home():
     prediction = 0
     a = {}
+    house_cost = None
+    cost_data = None
 
     if request.method == "POST":
         print(request.form)
+        house_cost = None
+        cost_data = None
         # read form data inputed by user
         ktch = request.form["ktch"] 
         car = request.form["car"]
@@ -36,32 +39,17 @@ def home():
         # Place user inputs into a list and create df for label encoding
         inputs = [cond, fbath, bed, f1, year, hbath, f2, garea, lot, car, ktch]
         inputs_pd = pd.DataFrame([inputs])
-        # inputs_pd[1] = le_gender.transform(inputs_pd[1])
-        # inputs_pd[3] = le_body.transform(inputs_pd[3])
-        # inputs_pd[4] = le_make.transform(inputs_pd[4])
-        # inputs_pd[5] = le_day.transform(inputs_pd[5])
-        # inputs_pd[6] = le_gender.transform(inputs_pd[6])
-        # inputs_pd[7] = le_body.transform(inputs_pd[7])
-        # inputs_pd[8] = le_make.transform(inputs_pd[8])
-        # inputs_pd[9] = le_day.transform(inputs_pd[9])
-        # inputs_pd[10] = le_day.transform(inputs_pd[10])
-
-        # # Run the pipeline (Scaler and rf_model) on user inputs
-        # prediction_vector = pipeline.predict_proba(inputs_pd)
-        # # Extract the probability to get 1(Serious or Fatal crash)
-        # prediction = prediction_vector
-        # print(prediction)
         
         model = pickle.load(open('housing.pkl','rb'))
         ml_value = model.predict(inputs_pd)
         print(model.predict(inputs_pd))
-        # reverse = ((max_sales - min_sales)*(predictions))+ min_sales
-        # print(reverse)
+
         house_cost = ml_value
         print(house_cost)
-
-        house_cost = (750000 - 34900) * house_cost + 34900
-        print(house_cost)
+        
+        cost_data = (750000 - 34900) * house_cost + 34900
+        cost_data = round(cost_data[0], 2)
+        print(cost_data)
         # # Dict of user inputs to reload
         a = {
         "car": car,
@@ -78,7 +66,7 @@ def home():
         }
         
         print(a)
-    return render_template("house.html")
+    return render_template("house.html", cost_data=cost_data)
 
 if __name__=='__main__':
    app.run()
