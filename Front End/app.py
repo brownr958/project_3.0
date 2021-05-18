@@ -34,7 +34,7 @@ def home():
         print(ktch)
 
         # Place user inputs into a list and create df for label encoding
-        inputs = [car, year, f1, f2, lot, fbath, garea, bed, cond, ktch, hbath]
+        inputs = [cond, fbath, bed, f1, year, hbath, f2, garea, lot, car, ktch]
         inputs_pd = pd.DataFrame([inputs])
         # inputs_pd[1] = le_gender.transform(inputs_pd[1])
         # inputs_pd[3] = le_body.transform(inputs_pd[3])
