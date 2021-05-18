@@ -78,7 +78,7 @@ def home():
         }
         
         print(a)
-    return render_template("house.html", fake_data = house_cost)
+    return render_template("house.html")
 
 if __name__=='__main__':
    app.run()
