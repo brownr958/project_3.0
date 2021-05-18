@@ -10,7 +10,6 @@ import pandas as pd
 
 # Create an instance of Flask
 app = Flask(__name__)
-
 model = None
 
 @app.route("/", methods=["GET", "POST"])
@@ -36,7 +35,7 @@ def home():
 
         # Place user inputs into a list and create df for label encoding
         inputs = [car, year, f1, f2, lot, fbath, garea, bed, cond, ktch, hbath]
-        inputs_pd = pd.DataFrame([inputs, inputs])
+        inputs_pd = pd.DataFrame([inputs])
         # inputs_pd[1] = le_gender.transform(inputs_pd[1])
         # inputs_pd[3] = le_body.transform(inputs_pd[3])
         # inputs_pd[4] = le_make.transform(inputs_pd[4])
@@ -58,10 +57,12 @@ def home():
         print(model.predict(inputs_pd))
         # reverse = ((max_sales - min_sales)*(predictions))+ min_sales
         # print(reverse)
-        house_cost = ml_value[1]
+        house_cost = ml_value
         print(house_cost)
 
-        # Dict of user inputs to reload
+        house_cost = (750000 - 34900) * house_cost + 34900
+        print(house_cost)
+        # # Dict of user inputs to reload
         a = {
         "car": car,
         "year": year,
@@ -77,8 +78,7 @@ def home():
         }
         
         print(a)
-
-    return render_template("house.html", house_cost, form_reuse=a)
+    return render_template("house.html", fake_data = house_cost)
 
 if __name__=='__main__':
    app.run()
