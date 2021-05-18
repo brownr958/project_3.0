@@ -7,8 +7,8 @@
   vertical-align: middle;
   line-height: 8px;
   text-align: center;
-  vertical-align: middle}
-​
+  vertical-align: middle;}
+
 #sbox {
   width: 80px;
   height: 80px;
@@ -19,7 +19,8 @@
   line-height: 24px;
   text-align: center;
   vertical-align: middle;}
-​
+
+
 #lbox {
   width: 240px;
   height: 60px;
@@ -30,66 +31,77 @@
   line-height: 24px;
   text-align: center;
   vertical-align: middle;}
-​
-.ktch {
-    position: relative;
-    left: 975px;
-    bottom: 330px;}
-​
-.car {
-  position: relative;
-  left: 1396px;
-  bottom: 528px;}
-​
+
 .year {
   position: relative;
   left: 695px;
-  bottom: 775px;}
-​
-.f1 {
-  position: relative;
-  left: 436px;
-  bottom: 520px;}
-​
+  bottom: 655px;}
+
 .cond {
   position: relative;
   left: 1200px;
-  bottom: 888px;}
-​
-.fbath {
-  position: relative;
-  left: 950px;
-  bottom: 848px;}
-​
+  bottom: 708px;}
+
 .bed {
   position: relative;
   left: 430px;
-  bottom: 888px;}
-​
+  bottom: 675px;}
+
 .f2 {
   position: relative;
   left: 675px;
-  bottom: 948px;}
-​
-.lot {
+  bottom: 735px;}
+
+.fbath {
   position: relative;
-  left: 675px;
-  bottom: 585px;}
-​
+  left: 950px;
+  bottom: 795px;}
+
+.garea {
+  position: relative;
+  left: 1376px;
+  bottom: 855px;}
+
+.car {
+  position: relative;
+  left: 1396px;
+  bottom: 828px;}
+
+.f1 {
+  position: relative;
+  left: 436px;
+  bottom: 760px;}
+
 .hbath {
   position: relative;
   left: 850px;
-  bottom: 870px;}  
-  
-.garea {
+  bottom: 820px;}
+
+.ktch {
   position: relative;
-  left: 900px;
-  bottom: 900px;} 
-}
+  left: 975px;
+  bottom: 900px;}
+
+.lot {
+  position: relative;
+  left: 675px;
+  bottom: 725px;}
+
+.submit {
+  position: relative;
+  left: 1396px;
+  bottom: 915px;} 
+
+.reset {
+  position: relative;
+  left: 1396px;
+  bottom: 860px;} 
+
 .main-svg {
     background-color: transparent !important;
 }  
-​
+
+
 .shadow
 {
     color: white;
@@ -98,9 +110,4 @@
     2px -2px 0 #000,
     -2px 2px 0 #000,
     8px 8px 0 #000;  
-}
-​
-.submit {
-  position: relative;
-  left: 1396px;
-  bottom: 750px;}  
+} 

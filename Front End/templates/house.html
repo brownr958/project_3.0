@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-​
+
 <head>
   <meta charset="utf-8">
   <title>House Builder</title>
@@ -8,9 +8,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="stylesheet" href="../static/styles.css">
 </head>
-​
+
   <body style="background: rgb(22, 22, 22); font-family: Tahoma; overflow-x: hidden;">
-    <div class="page-header text-center" style="background-image: url(https://miro.medium.com/max/8000/0*T9fHhdFwsBHZw8jn); height: 470px; background-position-x: center; background-position-y: 1600px; zoom: .9; border-bottom: #FDC00F; border-radius: 40px;">
+    <div class="page-header text-center" style="background-image: url(../static/GoldenGate.jpg); height: 470px; background-position-x: center; background-position-y: 1600px; zoom: .9; border-bottom: #FDC00F; border-radius: 40px;">
       <h1 class="shadow" style="color: #FDC00F; text-emphasis: outline; font-size: 100px; padding-top: 160px;"><b><i>House Price Calculator</i></b></h1>
     </div>
     <hr size="50px" style="background-color: #FDC00F; opacity: inherit;"> 
@@ -20,50 +20,52 @@
     </div>
     <div style="max-height: 700px;">
       <form method="POST" action="/" role="form" , name="petform">
-          <svg width="1880" height="700">
-            <image href="../static/HTMLHouse.png" x="160" y="0" width="1600" height="700"/>
-          </svg>
-          <div id="box" class="ktch">
-            <p><b>Kitchens: <input id="ktch" name="ktch" style="width: 40px;"></b></p>
-          </div>
-          <div id="box" class="car">
-            <p><b><input name="car" id="car" style="width: 40px;">-Car Garage</b></p> 
-          </div>
-          <div id="box" class="year" style="text-align: center;">
-            <p><b>Year Built: <input id="year" name="year" style="width: 60px;"></b></p>
-          </div>
-          <div id="lbox" class="f1">
-            <p><b>1st Floor SqFt: <input id="f1" name="f1" style="width: 60px;"></b></p> 
-          </div>
-          <div id="lbox" class="cond">
-            <p><b>Overall Condition: <input id="cond" name="cond" style="width: 40px;"> (Scale 1-10)</b></p>
-          </div>
-          <div id="box" class="fbath">
-            <p><b>Full Baths: <input id="fbath" name="fbath" style="width: 40px;"></b></p>  
-          </div>
-          <div id="box" class="bed">
-            <p><b>Bedrooms: <input id="bed" name="bed" style="width: 40px;"></b></p> 
-          </div>
-          <div id="lbox" class="f2">
-            <p><b>2nd Floor SqFt: <input id="f2" name="f2" style="width: 60px;"></b></p> 
-          </div>
-          <div id="lbox" class="lot">
-            <p><b>Lot Area SqFt: <input id="lot" name="lot" style="width: 80px;"></b></p>  
-          </div>
-          <div id="sbox" class="hbath">
-            <p><b>Half Baths:<input id="hbath" name="hbath" style="width: 40px;"></b></p>
-          </div>
-          <div id="sbox" class="garea">
-            <p><b>Garage Area:<input id="garea" name="garea" style="width: 40px;"></b></p>
-          </div>
-          <div>
-            <input type="submit" value="Submit" class="btn btn-default">
-            <a class="btn btn-primary" id="resetButton" role="button" style="background-color: grey; border: none; color: white;">Reset</a>
-        </div>     
-        </div>
-        <div style="text-align: center; padding-top: 20px; color: rgb(153, 255, 122)">
-      </form>
-      <h3>Approximate Cost of House: ${{fake_data}} </h3>
+      <svg width="1880" height="700">
+        <image href="../static/HTMLHouse.png" x="160" y="0" width="1600" height="700"/>
+      </svg>
+      <div id="box" class="year">
+        <p><b>Year Built: <input name="year" style="width: 60px; text-align: center;" maxlength="4" required></b></p>
+      </div>
+      <div id="lbox" class="cond">
+        <p><b>Overall Condition: <input name="cond" style="width: 40px; text-align: center;" maxlength="2" required> (Scale 1-10)</b></p>
+      </div>
+      <div id="box" class="bed">
+        <p><b>Bedrooms: <input name="bed" style="width: 40px; text-align: center;" maxlength="1" required></b></p> 
+      </div>
+      <div id="lbox" class="f2">
+        <p><b>2nd Floor SqFt: <input name="f2" style="width: 60px; text-align: center;" maxlength="4" required></b></p> 
+      </div>
+      <div id="box" class="fbath">
+        <p><b>Full Baths: <input name="fbath" style="width: 40px; text-align: center;" maxlength="1" required></b></p>  
+      </div>
+      <div id="lbox" class="garea">
+        <p><b>Garage Area: <input id="garea" name="garea" style="width: 60px;" maxlength="4" required></b></p>
+      </div>
+      <div id="box" class="car">
+        <p><b><input name="car" style="width: 40px; text-align: center;" maxlength="1" required>-Car Garage</b></p> 
+      </div>
+      <div id="lbox" class="f1">
+        <p><b>1st Floor SqFt: <input name="f1" style="width: 60px; text-align: center;" maxlength="4" required></b></p> 
+      </div>
+      <div id="sbox" class="hbath">
+        <p><b>Half Baths:<input name="hbath" style="width: 40px; text-align: center;" maxlength="1" required></b></p>
+      </div>
+      <div id="box" class="ktch">
+        <p><b>Kitchens: <input name="ktch" style="width: 40px; text-align: center;" maxlength="1" required></b></p>
+      </div>
+      <div id="lbox" class="lot">
+        <p><b>Lot Area SqFt: <input name="lot" style="width: 80px; text-align: center;" maxlength="6" required></b></p>  
+      </div>
+      <div id="box" class="submit">
+        <input type="submit" value="Calculate" class="btn btn-info btn-lg col-10" style="border: 6px solid rgb(98, 231, 255);">
+      </div>        
+      <div id="box" class="reset">
+        <a class="btn btn-danger" id="resetButton" role="button" style="border: 6px solid rgb(255, 74, 74);">Reset</a>
+      </div>
+      </form>      
+    </div>
+    <div style="text-align: center; padding-top: 20px; color: rgb(153, 255, 122)">
+      <h3>Approximate Cost of House: ${{house_cost}}</h3>
     </div>
   <script src="app.js"></script>
   </body>
