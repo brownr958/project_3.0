@@ -13,3 +13,5 @@ In order to run our house price calculator, you need to first clone the reposito
 ![House2](https://user-images.githubusercontent.com/74078757/123917483-d808d280-d950-11eb-9e10-57e50b35e48a.jpg)
 
 You can enter values in the boxes provided to calculate the price of your dream house or the one you are staying in currently. Whatever you desire. Once all the boxes contain values, click the Calculate button to get your house price. Keep in mind the price will be what the house is estimated to be worth in Ames, Iowa. Make sure you also pay attention to the note and enter only whole numbers and zeros where certain parts of the house do not apply. Some values also have limits, so no outrageous house prices can be calculated. We hope you enjoy our project and thanks for visiting the repository!
+
+*The first part of this project can be found at https://github.com/brownr958/project_3. The project had to be moved to a new repository due to some technical difficulties.
