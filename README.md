@@ -1,6 +1,6 @@
 ![House1](https://user-images.githubusercontent.com/74078757/123913251-fcae7b80-d94b-11eb-960b-76b76cdbc115.jpg)
 
-Welcome to the final project for Ryan Brown, Austin Williams, Micah West, and Greg Parker in the UNC Data Science Boot Camp. The requirements for this project were to find a problem worth solving or analyzing, use machine learning to solve the problem or at least attempt to solve, and to use two of the tools we learned in the last portion of the boot camp.
+
 
 ### How We Did It
 
